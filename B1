@@ -1,1 +1,35 @@
+using   System;
+using System.IO;
 
+class ASTERIXDecoder
+{
+    static void Main()
+    {
+        string filePath = "";
+        if (File.Exists(filePath))
+        {
+            string[] lines = File.ReadAllLines(filePath);
+            string[] data = new string[lines.Length];
+            for (int i = 0; i < lines.Length; i++)
+            {
+                data[i] = lines[i].Substring(0, 2);
+            }
+            for (int i = 0; i < data.Length; i++)
+            {
+                Console.WriteLine(data[i]);
+            }
+        }
+        else
+        {
+            Console.WriteLine("File not found");
+        }
+        {
+            data[i] = lines[i].Substring(0, 2);
+        }
+        for (int i = 0; i < data.Length; i++)
+        {
+            Console.WriteLine(data[i]);
+        }
+    }
+
+}
